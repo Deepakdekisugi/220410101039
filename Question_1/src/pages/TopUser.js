@@ -1,4 +1,3 @@
-// src/pages/TopUsers.js
 import React, { useEffect, useState } from 'react';
 import { fetchUsers } from '../api';
 import UserCard from '../components/UserCard';
