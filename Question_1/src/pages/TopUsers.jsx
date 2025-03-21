@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchUsers } from '../api';
+import { fUsers } from '../api';
 import UserCard from '../components/UserCard';
 import Loader from '../components/Loader';
 import { Container, Grid } from '@mui/material';
@@ -10,7 +10,7 @@ const TopUsers = () => {
 
     useEffect(() => {
         const getUsers = async () => {
-            const data = await fetchUsers();
+            const data = await fUsers();
             const sortedUsers = data.sort((a, b) => b.postCount - a.postCount).slice(0, 5);
             setUsers(sortedUsers);
             setLoading(false);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchPosts } from '../api';
+import { fPosts } from '../api';
 import PostCard from '../components/PostCard';
 import Loader from '../components/Loader';
 import { Container, Grid } from '@mui/material';
@@ -10,7 +10,7 @@ const Feed = () => {
 
     useEffect(() => {
         const getPosts = async () => {
-            const data = await fetchPosts();
+            const data = await fPosts();
             setPosts(data);
             setLoading(false);
         };
